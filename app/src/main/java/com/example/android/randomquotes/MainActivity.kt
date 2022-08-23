@@ -1,5 +1,6 @@
 package com.example.android.randomquotes
 
+import android.app.Application
 import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,8 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val quoteService = RetrofitHelper.getInstance().create(QuoteService::class.java)
-        val repo=QuotesRepo(quoteService)
+        val repo = (application as QuoteApplication).quotesRepo
         mainViewModel=ViewModelProvider(this,MainViewModelFactory(repo))[MainViewModel::class.java]
 
         mainViewModel.quotes.observe(this,Observer{
