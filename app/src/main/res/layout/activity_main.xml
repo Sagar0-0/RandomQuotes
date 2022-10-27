@@ -13,12 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/black"
+        android:textSize="70px"
         android:text="Random Quotes"
-        android:textAllCaps="true" />
-
-    <Switch
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textAllCaps="true"
+        android:background="@color/teal_200"/>
 
 </LinearLayout>
