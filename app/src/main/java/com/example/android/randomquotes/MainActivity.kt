@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         mainViewModel=ViewModelProvider(this,MainViewModelFactory(repo))[MainViewModel::class.java]
 
         mainViewModel.quotes.observe(this,Observer{
-            Log.d(TAG, "onCreate: "+it.results.toString())
+            Log.d(TAG, "onCreated: "+it.results.toString())
         })
     }
 }
