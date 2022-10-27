@@ -5,6 +5,7 @@ import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.android.randomquotes.api.QuoteService
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         mainViewModel=ViewModelProvider(this,MainViewModelFactory(repo))[MainViewModel::class.java]
 
         mainViewModel.quotes.observe(this,Observer{
-            Log.d(TAG, "onCreate: "+it.results.toString())
+            Toast.makeText(this, it.results.toString(), Toast.LENGTH_SHORT).show();
         })
     }
 }
