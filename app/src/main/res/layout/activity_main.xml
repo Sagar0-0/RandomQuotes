@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:id="@+id/First_activity"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,7 +16,7 @@
         android:fontFamily="serif"
         android:textColor="@color/black"
         android:textSize="70px"
-        android:text="Random Quotes"
+        android:text="@string/random_quotes"
         android:textAllCaps="true"
         android:background="@color/teal_200"/>
 
@@ -23,6 +24,6 @@
         android:id="@+id/button_id"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="self_destruct" />
+        android:text="@string/self_destruct" />
 
 </LinearLayout>
