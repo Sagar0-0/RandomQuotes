@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RandomQuotes</string>
+    <string name="self_destruct">self_destruct</string>
+    <string name="random_quotes">Random Quotes</string>
 </resources>
